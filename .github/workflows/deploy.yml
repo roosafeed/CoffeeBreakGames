@@ -23,17 +23,6 @@ jobs:
       - name: Build
         run: npm run build
 
-    #   - name: Copy files from dist folder
-    #     run: |
-    #         for dir in */; do
-    #             if [ -f "$dir/package.json" ]; then
-    #                 cd "$dir"
-    #                 echo "Building $dir..."
-    #                 npm install
-    #                 npm run build
-    #             fi
-    #         done
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
