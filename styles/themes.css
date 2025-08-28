@@ -1,0 +1,14 @@
+/* Meteor Rush Theme */
+.meteor-rush {
+    border: 2px solid #ff006e;
+    background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1));
+}
+
+.meteor-rush:hover {
+    box-shadow: 0 20px 40px rgba(255, 0, 110, 0.4);
+}
+
+.meteor-rush .game-icon {
+    background: linear-gradient(45deg, #ff006e, #8338ec);
+    color: white;
+}
