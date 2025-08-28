@@ -92,14 +92,9 @@ function playerMoveLeft() {
 function resetGame() {
     gameState.setState('state', 'stopped');
     gameState.setState('highScore', Math.max(gameState.highScore || 0, gameState.score || 0));
-    // gameState.highScore = Math.max(gameState.highScore || 0, gameState.score || 0);
-    // gameState.score = 0;
     gameState.setState('score', 0);
-    // gameState.level = 1;
     gameState.setState('level', 1);
-    // gameState.player = new Rocket(canvasWidth / 2, canvasHeight - 10, canvasWidth);
     gameState.setState('player', new Rocket(canvasWidth / 2, canvasHeight - 10, canvasWidth));
-    // gameState.asteroids = [];
     gameState.setState('asteroids', []);
 }
 
@@ -126,7 +121,6 @@ function spawnAsteroid() {
     if (!isGameRunning()) return;
 
     if (!gameState.asteroids || gameState.asteroids.length === 0) {
-        // gameState.asteroids = [];
         gameState.setState('asteroids', []);
     }
 

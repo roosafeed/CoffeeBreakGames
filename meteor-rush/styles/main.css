@@ -38,6 +38,7 @@ body {
 h1 {
     text-align: center;
     color: var(--accent);
+    text-shadow: 0 0 1px var(--player), 0 0 2px var(--asteroid), 0 0 3px var(--ui);
 }
 
 button {
@@ -91,7 +92,7 @@ canvas {
     /* border: 2px solid var(--white); */
     border-radius: var(--border-radius);
     image-rendering: pixelated; /* sharp retro look */
-    box-shadow: 0 0 4px #00ffff, 0 0 8px #ff00ff, 0 0 10px #ffff00;
+    box-shadow: 0 0 4px var(--player), 0 0 8px var(--accent), 0 0 10px var(--ui);
 }
 
 #crt {
