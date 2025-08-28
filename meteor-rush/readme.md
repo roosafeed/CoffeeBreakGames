@@ -2,6 +2,9 @@
 
 A simple, retro-styled browser game where you pilot a rocket and dodge falling meteors. Built with TypeScript and the HTML5 Canvas API—no heavy frameworks required.
 
+## Play Online
+- https://roosafeed.github.io/CoffeeBreakGames/meteor-rush/
+
 ## Features
 - **Fast arcade gameplay**: Move left/right and survive as long as you can
 - **Progressive difficulty**: Asteroid speed and count scale with your level

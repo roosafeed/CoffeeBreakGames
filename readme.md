@@ -1,6 +1,11 @@
 # CoffeeBreak Games
 
+[![Deployed to GitHub Pages](https://github.com/roosafeed/CoffeeBreakGames/actions/workflows/deploy.yml/badge.svg)](https://github.com/roosafeed/CoffeeBreakGames/actions/workflows/deploy.yml)
+
 A growing collection of tiny, low-effort mini games I build in spare moments—focused on learning, fun, and finishing, not perfection.
+
+## Live Site
+- Play online: https://roosafeed.github.io/CoffeeBreakGames/
 
 ## Philosophy
 - **Small scope**: Games should be simple enough to finish quickly.
@@ -10,11 +15,11 @@ A growing collection of tiny, low-effort mini games I build in spare moments—f
 
 ## Current Games
 - **Meteor Rush** — Dodge falling meteors and chase high scores.
-  - Play: open the root site and click Play, or open `meteor-rush/index.html` via a local server
+  - Play online: https://roosafeed.github.io/CoffeeBreakGames/meteor-rush/
   - Docs: `meteor-rush/readme.md`
 
-## Quick Start
-1. Open the arcade:
+## Quick Start (Local)
+1. Open the arcade locally:
    - Easiest: Right-click `index.html` (repo root) in VS Code and choose "Open with Live Server".
    - Or serve the repo root:
      ```bash
@@ -24,6 +29,31 @@ A growing collection of tiny, low-effort mini games I build in spare moments—f
 2. Click a game card to play.
 
 Note: For ES modules to work reliably (e.g., in `meteor-rush`), use an HTTP server instead of `file://`.
+
+## Build and Deploy (GitHub Pages)
+This repo is set up to build everything into a `public/` folder for GitHub Pages.
+
+1. Install root dependencies:
+   ```bash
+   npm install
+   ```
+2. Build all games and site assets into `public/`:
+   ```bash
+   npm run build
+   ```
+   This runs `build-all.js` which:
+   - **Creates `public/`**.
+   - **Copies root assets** (`index.html`, `styles/`, `img/`, `src/`) to `public/`.
+   - **Detects games** by folders that contain a `package.json`, runs `npm install` and `npm run build` inside each, and then copies each game folder into `public/<game-name>/`.
+3. Deploy: pushing to `main` triggers the GitHub Action that publishes `public/` to the `gh-pages` branch (see `.github/workflows/deploy.yml`).
+
+### Test the built site locally
+```bash
+npx http-server public -c-1 -p 5173
+# open the printed URL (e.g., http://127.0.0.1:5173)
+```
+
+Or use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to run the public/index.html file directly.
 
 ## Developing
 - Meteor Rush uses TypeScript and outputs to `meteor-rush/dist`.
@@ -39,6 +69,7 @@ Note: For ES modules to work reliably (e.g., in `meteor-rush`), use an HTTP serv
 - Prefer vanilla HTML/CSS/JS (TypeScript optional)
 - Add a card to `src/index.js` with `title`, `description`, and `url`
 - Provide a short `readme.md` inside the game folder (controls, setup, notes)
+- If the game needs a build step, include a `package.json` with a `build` script. The root `build-all.js` will detect and build it automatically.
 
 ## Tech
 - **Frontend**: HTML, CSS, JavaScript (TypeScript where helpful)
@@ -48,15 +79,16 @@ Note: For ES modules to work reliably (e.g., in `meteor-rush`), use an HTTP serv
 ## Repo Structure
 ```
 CoffeeBreakGames/
-├─ index.html           # Arcade landing page
-├─ src/index.js         # Renders game cards
-├─ styles/              # Shared styles for the arcade UI
-├─ <game-name>/         # Example mini game
+├─ index.html            # Arcade landing page
+├─ src/index.js          # Renders game cards
+├─ styles/               # Shared styles for the arcade UI
+├─ public/               # Build output for GitHub Pages (generated)
+├─ <game-name>/          # Example mini game
 │  ├─ index.html
 │  ├─ src/ (TS sources)
 │  ├─ dist/ (compiled JS)
 │  └─ readme.md
-└─ img/ss/              # Screenshots
+└─ img/ss/               # Screenshots
 ```
 
 ## Why so little AI?
