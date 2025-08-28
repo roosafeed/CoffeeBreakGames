@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [gh-pages] 
+    branches: [main] 
 
 jobs:
   build-deploy:
@@ -20,13 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-    #   - name: Build all games
-    #     run: npm run build
-
       - name: Copy files from dist folder
         run: |
             for dir in */; do
-                if [-f "$dir/package.json"]; then
+                if [ -f "$dir/package.json" ]; then
                     cd "$dir"
                     echo "Building $dir..."
                     npm install
@@ -38,4 +35,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: .
