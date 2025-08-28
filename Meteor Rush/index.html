@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meteor Rush</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">        
+    </head>
+    <body> 
+        <h1>Meteor Rush</h1>       
+
+        <div class="main-container">
+            <div class="left">
+                <div class="instructions-container">
+                    <p>Use the left and right arrow keys to move the spaceship and avoid the meteors!</p>
+                    <p>Press "Space" to start the game.</p>
+                    <p>Score points by surviving longer!</p>
+                    <p>Good luck!</p>
+                </div>
+            </div>
+
+            <div class="center">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <div class="right">
+                <div class="score-container">
+                    <p id="score">Score: <span class="ui-text" id="currentScore">0</span></p>
+                    <p id="highScore">High Score: <span class="ui-text" id="highestScore">0</span></p>
+                </div>
+
+                <div class="buttons-container">
+                    <button id="startButton" class="btn-primary">Start [Space]</button>
+      
+                    <button id="pauseButton" class="btn-primary">Pause [Space]</button>  
+
+                    <button id="resumeButton" class="btn-primary">Resume [Space]</button>
+                    <button id="stopButton">Stop</button> 
+                    <button id="restartButton">Restart</button>                    
+                </div>
+            </div>
+        </div>
+
+        <div id="crt"></div>
+            
+        <script type="module" src="./dist/main.js"></script>
+    </body>
+</html>

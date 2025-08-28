@@ -1,0 +1,23 @@
+{
+  "name": "meteor-rush",
+  "version": "1.0.0",
+  "description": "A simple asteroid avoiding game",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rocket",
+    "vanillajs",
+    "game",
+    "asteroid",
+    "meteor"
+  ],
+  "author": "Roosafeed Koya",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.9.2"
+  }
+}

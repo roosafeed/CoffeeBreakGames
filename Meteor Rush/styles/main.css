@@ -1,0 +1,120 @@
+:root {
+    --bg: #000000;
+    --player: #00ffff;
+    --asteroid: #ff3b3b;
+    --asteroid-alt: #ffa500;
+    --ui: #ffff00;
+    --accent: #ff00ff;
+    --white: #ffffff;
+
+    --padding-s: 8px;
+    --padding-m: 16px;
+    --padding-l: 24px;
+    --padding-xl: 32px;
+
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+}
+
+*, :not(#crt) {
+    filter: blur(0.25px);
+}
+
+body {
+    background: var(--bg);
+    overflow: hidden;
+    padding: var(--padding-xl);
+    color: var(--white);
+    height: 100vh;    
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent);
+}
+
+button {
+    background: var(--ui);
+    color: var(--bg);
+    border: none;
+    padding: var(--padding-s) var(--padding-m);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 14px;
+    margin-bottom: var(--padding-m);
+}
+
+    button.btn-primary {
+        background: var(--accent);
+        color: var(--bg);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+.ui-text {
+    color: var(--ui);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--padding-m);
+    margin-top: var(--padding-l);
+}
+
+.left, .right {
+    flex: 1;
+}
+
+    .left p, .right p {
+        margin-bottom: var(--padding-m);
+        line-height: 1.5;
+    }
+
+
+/* the main stuff */
+canvas {
+    background: var(--bg);
+    display: block;
+    margin: 0 auto;
+    /* border: 2px solid var(--white); */
+    border-radius: var(--border-radius);
+    image-rendering: pixelated; /* sharp retro look */
+    box-shadow: 0 0 4px #00ffff, 0 0 8px #ff00ff, 0 0 10px #ffff00;
+}
+
+#crt {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none; /* so clicks go through */
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.09) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    background-size: cover;
+    background-size: 100% 3px;
+    mix-blend-mode: difference;
+    animation: scanline 10s infinite;
+}
+
+
+/* Animations */
+@keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -10px; }    
+}
