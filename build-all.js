@@ -1,5 +1,5 @@
 import { execSync } from "child_process";
-import { readdirSync, existsSync, mkdirSync, cpSync } from "fs";
+import { readdirSync, existsSync, mkdirSync, cpSync, writeFileSync } from "fs";
 
 const games = readdirSync(".").filter(f => 
     !["node_modules", ".github", "styles", "img", "src"].includes(f) &&
@@ -7,6 +7,9 @@ const games = readdirSync(".").filter(f =>
 );
 
 mkdirSync("public", { recursive: true });
+
+// create .nojekyll file to prevent GitHub Pages from using Jekyll
+writeFileSync("public/.nojekyll", "");  
 
 // copy root level files to public
 cpSync("index.html", "public/index.html");
