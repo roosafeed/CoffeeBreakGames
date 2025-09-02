@@ -12,3 +12,35 @@
     background: linear-gradient(45deg, #ff006e, #8338ec);
     color: white;
 }
+
+.meteor-rush .play-button {
+    background: linear-gradient(45deg, #ff006e, #8338ec);
+}
+
+    .meteor-rush .play-button:hover {
+        box-shadow: 0 10px 20px rgba(255, 0, 110, 0.4);
+    }
+
+
+/* Dots & Boxes Theme */
+.dots-and-boxes {
+    border: 2px solid #00E5FF;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(163, 255, 18, 0.1));
+}
+
+.dots-and-boxes:hover {
+    box-shadow: 0 20px 40px rgba(0, 229, 255, 0.4);
+}
+
+.dots-and-boxes .game-icon {
+    background: linear-gradient(45deg, #00E5FF, #A3FF12);
+    color: #E6EDF7;
+}
+
+.dots-and-boxes .play-button {
+    background: linear-gradient(45deg, #00E5FF, #A3FF12);
+}
+
+    .dots-and-boxes .play-button:hover {
+        box-shadow: 0 10px 20px rgba(0, 229, 255, 0.4);
+    }

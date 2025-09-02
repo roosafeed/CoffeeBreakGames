@@ -17,6 +17,9 @@ A growing collection of tiny, low-effort mini games I build in spare moments—f
 - **Meteor Rush** — Dodge falling meteors and chase high scores.
   - Play online: https://roosafeed.github.io/CoffeeBreakGames/meteor-rush/
   - Docs: `meteor-rush/readme.md`
+- **Dots and Boxes** — Claim edges, complete boxes, and outscore your opponent.
+  - Play online: https://roosafeed.github.io/CoffeeBreakGames/dots-and-boxes/
+  - Docs: `dots-and-boxes/readme.md`
 
 ## Quick Start (Local)
 1. Open the arcade locally:
