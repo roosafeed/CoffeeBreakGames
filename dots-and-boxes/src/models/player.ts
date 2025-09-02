@@ -26,6 +26,12 @@ export class Player {
   public setIsMyTurn(isMyTurn: boolean): void {
     this.isMyTurn = isMyTurn;
     this.element?.classList.toggle('current-turn', isMyTurn);
+    if (isMyTurn) {
+      document.getElementsByTagName('body')[0].style.setProperty('--current-player-color', this.getColor());
+    }
+    else {
+      document.getElementsByTagName('body')[0].style.removeProperty('--current-player-color');
+    }
   }
 
   public getElement(): HTMLElement | null {

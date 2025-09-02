@@ -9,7 +9,7 @@
     --radius: 16px;
     --gap: 14px;
     --panel-pad: 14px;
-    --shadow-strong: 0 0 0 1px rgba(230,237,247,0.06), 0 10px 30px rgba(0,0,0,0.35);
+    --shadow-strong: 4px 4px 8px 1px rgba(30,37,47,0.06), 0 10px 30px rgba(0,0,0,0.35);
     --shadow-glow-primary: 0 0 20px rgba(0,229,255,0.35), 0 0 2px rgba(0,229,255,0.8) inset;
     --shadow-glow-accent: 0 0 20px rgba(163,255,18,0.28), 0 0 2px rgba(163,255,18,0.7) inset;
     --ease: cubic-bezier(.2,.7,.1,1);
@@ -26,7 +26,8 @@
 }
 
 body {
-    background: var(--bg);
+    background: linear-gradient(to bottom right, var(--bg) 60%, #0B1220C0),
+                linear-gradient(to top left, var(--current-player-color, #0B1220C0) 70%, transparent);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,6 +93,7 @@ body {
     height: fit-content;
     background-color: var(--panel);
     padding: var(--panel-pad);
+    box-shadow: var(--shadow-strong);
 
     display: grid;
     grid-template-rows: repeat(var(--cells, 9), 1fr);
@@ -162,6 +164,8 @@ body {
     gap: var(--gap);
     background-color: var(--panel);
     padding: var(--panel-pad);
+    mix-blend-mode: lighten;
+    box-shadow: var(--shadow-strong);
 }
 
     .player .player-icon {
