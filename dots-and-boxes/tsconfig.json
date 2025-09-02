@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "lib": ["ES2016", "DOM"],
+    "moduleResolution": "bundler",  // browser focused imports with .js extensions
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": true
+  }
+}

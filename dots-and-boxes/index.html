@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Dots and Boxes</title>
+</head>
+<body>
+    <!-- Top bar -->
+    <div id="top-bar">
+        <div id="brand">
+            <h2>Dots &amp; Boxes</h2>
+        </div>
+        <div id="controls">
+            <div class="control" title="Board size">
+                <label for="board-size">Grid</label>
+                <input id="board-size" type="range" min="3" max="10" value="5">
+                <span id="sizeLabel" aria-live="polite">5x5</span><span> dots</span>
+            </div>
+            <div class="control" title="Current player">
+                <label for="playerSwitch">Turn</label>
+                <button disabled="disabled" id="playerSwitch" class="primary" type="button" aria-pressed="false">
+                    <span id="current-player-name" class="player-name">Player 1</span>
+                </button>
+            </div>
+            <div class="control" title="Game controls">
+                <button id="play-button" class="ghost" type="button">Start game</button>
+                <button id="reset-button" class="ghost" type="button">Reset board</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game container -->
+    <div id="game-container">
+        <!-- Game board -->
+        <div id="game-board"></div>
+
+        <!-- Players -->
+        <div id="players-container"></div>
+    </div>
+
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
