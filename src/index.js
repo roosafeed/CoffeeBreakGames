@@ -7,9 +7,19 @@ const games = [
         description: 'Navigate through space and avoid meteors in this fast-paced arcade game. Use arrow keys to survive as long as possible!',
         icon: '🚀',
         theme: 'meteor-rush',
-        url: './meteor-rush/index.html', // Update with your actual game path
+        url: './meteor-rush/index.html',
         available: true
     },
+    {
+        id: 'dots-and-boxes',
+        title: 'Dots & Boxes',
+        genre: 'Strategy • Multiplayer',
+        description: 'A classic pencil-and-paper strategy game for the browser. Claim edges, complete boxes, and outscore your opponent!',
+        icon: '✏️',
+        theme: 'dots-and-boxes',
+        url: './dots-and-boxes/index.html',
+        available: true
+    }
 ];
 
 // Generate stars

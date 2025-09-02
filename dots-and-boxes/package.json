@@ -1,0 +1,24 @@
+{
+  "name": "dots-and-boxes",
+  "version": "1.0.0",
+  "description": "Dots and boxes game",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "dots",
+    "and",
+    "boxes",
+    "typescript",
+    "games"
+  ],
+  "author": "Roosafeed Koya",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.9.2"
+  }
+}
