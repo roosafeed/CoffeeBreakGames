@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>Neon Snake Game</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="title">Neon Snake Game</h1>
+        <div id="main" class="container">          
+            <div id="game-stats">
+                <div>
+                    <p>
+                        <span>Score: </span>
+                        <span id="score">0</span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>Best: </span>
+                        <span id="best-score">0</span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="game-arena">
+            </div>
+
+            <div id="game-instructions">
+                <p>Press <span class="key">&lt;spacebar&gt;</span> to start/pause the game</p>
+                <p>Use the <span class="key">&lt;arrow keys&gt;</span> to move the snake</p>
+                <p>Eat the glowing food to grow and score points</p>
+                <p>Avoid running into yourself</p>
+            </div>
+        </div>
+
+        <script type="module" src="./dist/main.js"></script>
+    </body>
+</html>

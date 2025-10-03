@@ -1,0 +1,23 @@
+{
+  "name": "neon-snake",
+  "version": "1.0.0",
+  "description": "the classic snake game with a minimalistic neon skin",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "snake",
+    "game",
+    "neon",
+    "vanillajs",
+    "snake"
+  ],
+  "author": "Roosafeed Koya",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}

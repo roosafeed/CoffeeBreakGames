@@ -1,0 +1,135 @@
+:root {
+	/* Background */
+	--bg-color-main: #0D0D0D;
+	--bg-gradient: radial-gradient(circle at center, #0D0D0D 0%, #000000 100%);
+
+	/* Game area */
+	--arena-border-color: #1A1A1A;
+	--arena-glow-color: #08F7FE;
+
+	/* Snake */
+	--snake-body-gradient: linear-gradient(135deg, #FF00FF, #08F7FE);
+	--snake-head-color: #FF00FF;
+	/* --snake-head-color: #F5F749; */
+	--snake-head-glow: #F5F74988;
+
+	/* Food */
+	--food-color: #FF6B00;
+	--food-glow: #FF6B00AA;
+
+	/* Typography colors */
+	--title-color: #FF00FF;
+	--title-glow-1: #FF00FF;
+	--title-glow-2: #08F7FE;
+
+	--score-color: #08F7FE;
+	--score-glow: #08F7FE;
+
+	/* Fonts */
+	--font-title: "Orbitron", sans-serif;
+	--font-score: "Share Tech Mono", monospace;
+
+	/* --data-grid-size-cols: 5;
+	--data-grid-size-rows: 4; */
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--bg-gradient);
+	overflow: hidden;
+	color: var(--score-color);
+}
+
+.title {
+	font-family: var(--font-title);
+	text-shadow: 0 0 12px var(--title-glow-1), 0 0 24px var(--title-glow-2);
+	text-align: center;
+	font-size: 3rem;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+}
+
+#game-stats {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+}
+
+#game-stats p {
+	font-family: var(--font-score);
+	font-size: 1.5rem;
+	color: var(--score-color);
+	text-shadow: 0 0 8px var(--score-glow);
+}
+
+#game-arena {
+	border: 2px solid var(--arena-border-color);
+  	box-shadow: 0 0 12px var(--arena-glow-color);
+	/* min-width: 500px;
+	min-height: 500px; */
+	border-radius: 5px;
+
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
+    justify-content: center;
+	grid-template-columns: repeat(var(--data-grid-size-cols), 20px);
+	grid-template-rows: repeat(var(--data-grid-size-rows), 20px);
+}
+
+/* bottom bar */
+#game-instructions {
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+	gap: 2rem;
+}
+
+.key {
+	color: var(--title-color);
+}
+
+/* Snake and food */
+
+.cell {
+	width: 20px;
+	height: 20px;
+	border: dotted 1px #222;
+}
+
+.snake, .food {
+	width: 100%;
+	height: 100%;
+}
+
+.snake-body {
+	background: var(--snake-body-gradient);
+}
+
+.snake-head {
+	background: var(--snake-head-color);
+	box-shadow: 0 0 10px var(--snake-head-glow);
+}
+
+.food {
+	background: var(--food-color);
+	box-shadow: 0 0 12px var(--food-glow);
+}
