@@ -1,0 +1,36 @@
+@import "layout.css";
+@import "components/game.css";
+@import "components/header.css";
+@import "components/buttons.css";
+@import "components/dropdown.css";
+
+* { 
+    box-sizing: border-box; 
+}
+
+html,body { 
+    height:100%; 
+}
+
+body {
+    margin:0;
+    font-family: var(--font-sans);
+    background: var(--app-bg);
+    color: var(--text-primary);
+    line-height: 1.25;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+    background: var(--app-bg);
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    gap: var(--spacing-lg);
+}
+
+

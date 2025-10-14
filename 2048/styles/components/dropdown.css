@@ -1,0 +1,30 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--surface);
+    min-width: 200px;
+    box-shadow: var(--shadow-1);
+}
+
+.dropdown-content a {
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--app-bg);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--muted);
+}

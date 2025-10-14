@@ -1,0 +1,31 @@
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.gap-xs { gap: var(--spacing-xs);}
+.gap-sm { gap: var(--spacing-sm);}
+.gap-md { gap: var(--spacing-md);}
+.gap-lg { gap: var(--spacing-lg);}
+.gap-xl { gap: var(--spacing-xl);}
