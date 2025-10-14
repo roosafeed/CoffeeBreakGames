@@ -1,0 +1,27 @@
+.header {
+    background-color: var(--glass);
+    border-radius: var(--radius);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: 1px solid var(--border-weak);
+}
+
+.score-container {
+    background: var(--surface);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+    min-width: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.score-container > * {
+    margin: 0;
+}
+
+.score-container > p {
+    color: var(--muted);
+}

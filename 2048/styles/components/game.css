@@ -1,0 +1,60 @@
+/* panel that holds the board */
+.board-wrap {
+    background: var(--container-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--container-radius);
+    box-shadow: var(--shadow-1);
+    display: inline-block;
+}
+
+.board {
+    background: var(--board-bg);
+    padding: var(--board-padding);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: repeat(4, var(--tile-size));
+    gap: var(--spacing-sm);
+}
+
+/* empty cell */
+.cell {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    border-radius: var(--tile-radius);
+    background: var(--cell-empty);
+}
+
+/* tile base */
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    display: grid;
+    place-items: center;
+    border-radius: var(--tile-radius);
+    font-weight: var(--tile-font-weight);
+    font-family: var(--font-nums);
+    font-size: 28px;
+    box-shadow: var(--shadow-2);
+    transition: transform var(--med) var(--ease), background-color var(--fast) var(--ease), color var(--fast) var(--ease);
+    transform-origin: center;
+}
+
+/* tiles with numbers */
+.tile-2   { background: var(--tile-2); color: var(--tile-text-dark); }
+.tile-4   { background: var(--tile-4); color: var(--tile-text-dark); }
+.tile-8   { background: var(--tile-8); color: var(--tile-text-dark); }
+.tile-16  { background: var(--tile-16); color: var(--tile-text-light); }
+.tile-32  { background: var(--tile-32); color: var(--tile-text-light); }
+.tile-64  { background: var(--tile-64); color: var(--tile-text-light); }
+.tile-128 { background: linear-gradient(135deg,var(--tile-128), #c58bff); color: var(--tile-text-light); font-size: 24px;}
+.tile-256 { background: linear-gradient(135deg,var(--tile-256), #b08fff); color: var(--tile-text-light); }
+.tile-512 { background: linear-gradient(135deg,var(--tile-512), #8b63ff); color: var(--tile-text-light); }
+.tile-1024{ background: linear-gradient(135deg,var(--tile-1024), #5a3ef5); color: var(--tile-text-light); }
+.tile-2048{ background: linear-gradient(135deg,var(--tile-2048), var(--accent)); color: var(--tile-text-light); box-shadow: 0 10px 30px rgba(59,130,246,0.24); transform: translateY(-2px); }
+
+.tile-pop { animation: pop var(--med) var(--ease) 0s 1 forwards; } /* for spawn/pop effect */
+
+@keyframes pop {
+    0%   { transform: scale(0); }
+    100% { transform: scale(1); }    
+}

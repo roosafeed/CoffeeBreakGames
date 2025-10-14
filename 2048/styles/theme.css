@@ -1,0 +1,102 @@
+:root {
+    color-scheme: light dark;
+
+    /* Layout tokens */
+    --gap: 16px;
+    --tile-size: 96px;
+    --board-padding: 16px;
+    --radius: 12px;
+    --tile-radius: 10px;
+    --container-radius: 18px;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Motion */
+    --ease: cubic-bezier(.22,.9,.32,1);
+    --fast: 160ms;
+    --med: 260ms;
+
+    /* Typography */
+    --font-sans: "Inter", "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    --font-nums: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+    --tile-font-weight: 700;
+}
+
+:root[data-theme="light"] {
+    --shadow-1: 0 6px 18px rgba(16,24,40,0.08);
+    --shadow-2: 0 3px 8px rgba(16,24,40,0.06);
+
+    /* Base / layout */
+    --app-bg: #f3f6f9;            /* page background */
+    --container-bg: #eef3f8;      /* board container background */
+    --board-bg: linear-gradient(180deg,#ffffff, #f6fbff); /* subtle board gradient */
+    --surface: #ffffff;           /* tile background fallback */
+    --muted: #9aa7b2;            /* small text, meta */
+    --text-primary: #0f1720;     /* main text */
+    --accent: #3b82f6;           /* primary accent (buttons, focus) */
+    --accent-2: #7c3aed;         /* secondary accent for high tiles */
+    --glass: rgba(255,255,255,0.6);
+
+    /* Tile text colors */
+    --tile-text-dark: #0f1720;  /* for light tiles */
+    --tile-text-light: #ffffff; /* for darker tiles */
+
+    /* Tiles (semantic mapping) */
+    --tile-2:   #f7fafc;  /* very light, almost white */
+    --tile-4:   #e6f0ff;
+    --tile-8:   #ffdca8;
+    --tile-16:  #ffc37a;
+    --tile-32:  #ff9f6b;
+    --tile-64:  #ff7a59;
+    --tile-128: #f6b3ff;
+    --tile-256: #d0a2ff;
+    --tile-512: #9d7bff;
+    --tile-1024:#6f56f8;
+    --tile-2048:#3b82f6;   /* main celebratory color (accent) */
+
+    /* Neutral empty cell */
+    --cell-empty: rgba(15,23,32,0.06);
+
+    /* Borders / highlights */
+    --border-weak: rgba(15,23,32,0.06);
+    --focus-ring: 0 0 0 4px rgba(59,130,246,0.12);
+}
+
+/* @media (prefers-color-scheme: dark) { */
+    :root[data-theme="dark"] {
+        --app-bg: #0b1220;
+        --container-bg: linear-gradient(180deg,#0f1724,#07101a);
+        --board-bg: linear-gradient(180deg,#08101a,#0b1420);
+        --surface: rgba(255,255,255,0.04);
+        --muted: #94a3b8;
+        --text-primary: #e6eef8;
+        --accent: #60a5fa;
+        --accent-2: #a78bfa;
+        --glass: rgba(255,255,255,0.03);
+
+        --shadow-1: 0 8px 20px rgba(2,6,23,0.6);
+        --shadow-2: 0 3px 8px rgba(2,6,23,0.65);
+
+        --tile-2:   rgba(255,255,255,0.04);
+        --tile-4:   rgba(255,255,255,0.06);
+        --tile-8:   #2b2f45;
+        --tile-16:  #3b3241;
+        --tile-32:  #4b2b36;
+        --tile-64:  #5b2730;
+        --tile-128: #262335;
+        --tile-256: #2c1f3a;
+        --tile-512: #3a1a4a;
+        --tile-1024:#3b2b7a;
+        --tile-2048:#60a5fa;
+
+        --cell-empty: rgba(255,255,255,0.02);
+        --border-weak: rgba(255,255,255,0.06);
+        --tile-text-dark: #e6eef8;
+        --tile-text-light: #0b1220;
+    }
+/* } */
